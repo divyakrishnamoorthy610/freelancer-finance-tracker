@@ -1,0 +1,46 @@
+<div class="dashboard">
+  <h2>Financial Summary</h2>
+  
+  <div class="kpi-grid">
+    <div class="kpi-card income">
+      <h3>Total Income</h3>
+      <p>₹{{ totalIncome }}</p>
+    </div>
+    <div class="kpi-card expense">
+      <h3>Total Expenses</h3>
+      <p>₹{{ totalExpense }}</p>
+    </div>
+    <div class="kpi-card profit">
+      <h3>Net Profit</h3>
+      <p>₹{{ netProfit }}</p>
+    </div>
+    <div class="kpi-card tax">
+      <h3>Est. Tax (28%)</h3>
+      <p>₹{{ estimatedTax }}</p>
+    </div>
+  </div>
+
+  <h3>Recent Transactions</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (t of transactions; track t._id) {
+        <tr>
+          <td>{{ t.description }}</td>
+          <td>{{ t.category }}</td>
+          <td>{{ t.type }}</td>
+          <td>₹{{ t.amount }}</td>
+          <td>{{ t.date | date }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,41 @@
+<div class="transactions">
+  <h2>Transactions</h2>
+
+  <div class="add-form">
+    <h3>Add New Transaction</h3>
+    <div class="form-grid">
+      <input type="text" placeholder="Description" [(ngModel)]="newTransaction.description" />
+      <input type="number" placeholder="Amount" [(ngModel)]="newTransaction.amount" />
+      <select [(ngModel)]="newTransaction.type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <input type="text" placeholder="Category" [(ngModel)]="newTransaction.category" />
+      <input type="date" [(ngModel)]="newTransaction.date" />
+      <button (click)="addTransaction()">Add Transaction</button>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of transactions">
+        <td>{{ t.description }}</td>
+        <td>{{ t.category }}</td>
+        <td [class]="t.type">{{ t.type }}</td>
+        <td>₹{{ t.amount }}</td>
+        <td>{{ t.date | date }}</td>
+        <td><button class="delete-btn" (click)="deleteTransaction(t._id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

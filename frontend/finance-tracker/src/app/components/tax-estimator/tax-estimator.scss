@@ -1,0 +1,84 @@
+.tax-estimator {
+  padding: 24px 32px;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #2c3e50;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #2c3e50;
+  }
+
+  .tax-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+
+    .tax-card {
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+
+      h3 {
+        font-size: 14px;
+        margin: 0 0 8px;
+        color: white;
+      }
+
+      p {
+        font-size: 26px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      &.highlight {
+        background: #1abc9c;
+      }
+    }
+  }
+
+  .tax-result {
+    background: #f9f9f9;
+    padding: 24px;
+    border-radius: 10px;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+
+      th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background: #f5f5f5;
+        font-weight: 600;
+      }
+    }
+
+    .tax-summary {
+      background: #e74c3c;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+
+      p {
+        margin: 8px 0;
+      }
+
+      strong {
+        font-size: 22px;
+      }
+    }
+  }
+}

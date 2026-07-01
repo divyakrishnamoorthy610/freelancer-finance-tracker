@@ -1,0 +1,53 @@
+<div class="tax-estimator">
+  <h2>Tax Estimator</h2>
+
+  <div class="tax-grid">
+    <div class="tax-card">
+      <h3>Total Income</h3>
+      <p>₹{{ totalIncome }}</p>
+    </div>
+    <div class="tax-card">
+      <h3>Total Expenses</h3>
+      <p>₹{{ totalExpense }}</p>
+    </div>
+    <div class="tax-card highlight">
+      <h3>Net Profit</h3>
+      <p>₹{{ netProfit }}</p>
+    </div>
+  </div>
+
+  <div class="tax-result">
+    <h3>Tax Calculation (Indian Tax Slabs)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Income Slab</th>
+          <th>Tax Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Up to ₹2,50,000</td>
+          <td>0%</td>
+        </tr>
+        <tr>
+          <td>₹2,50,001 - ₹5,00,000</td>
+          <td>5%</td>
+        </tr>
+        <tr>
+          <td>₹5,00,001 - ₹10,00,000</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Above ₹10,00,000</td>
+          <td>30%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tax-summary">
+      <p>Your Tax Rate: <strong>{{ taxRate }}%</strong></p>
+      <p>Estimated Tax: <strong>₹{{ estimatedTax }}</strong></p>
+    </div>
+  </div>
+</div>
