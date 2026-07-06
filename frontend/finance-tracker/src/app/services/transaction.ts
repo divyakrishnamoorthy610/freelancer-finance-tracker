@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TransactionService {
-  private apiUrl = 'http://localhost:5000/api/transactions';
+  private apiUrl = 'http://lohttps://freelancer-finance-tracker-backend.onrender.com/api/transactionscalhost:5000/api/transactions';
 
   constructor(private http: HttpClient) {}
 

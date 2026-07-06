@@ -19,7 +19,7 @@ export class Dashboard implements OnInit {
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:5000/api/transactions').subscribe({
+    this.http.get<any[]>('https://freelancer-finance-tracker-backend.onrender.com').subscribe({
       next: (data) => {
         this.transactions = data;
         this.calculateSummary();
