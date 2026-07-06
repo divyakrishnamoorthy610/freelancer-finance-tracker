@@ -1,0 +1,4 @@
+[build]
+  base = "frontend/finance-tracker"
+  command = "ng build"
+  publish = "dist/finance-tracker/browser"type netlify.toml
